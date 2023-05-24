@@ -1,19 +1,21 @@
 package com.cognizant.flipkart;
 
-import java.util.Arrays;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import java.util.Arrays;
 
-public class DriverSetUp {
+public class DriverSetUpWin {
 	private static WebDriver driver;
 	
 	public static WebDriver setDriver() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Alokr\\Documents\\ChromeDriver\\chromedriver.exe");
-		ChromeOptions opt = new ChromeOptions();
-		opt.setExperimentalOption("excludeSwitches", Arrays.asList("disbale-popup-blocking"));
-		driver = new ChromeDriver(opt);
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(options);
 		return driver;
 	}
 

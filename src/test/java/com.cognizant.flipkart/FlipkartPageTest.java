@@ -21,7 +21,7 @@ public class FlipkartPageTest {
 	@SuppressWarnings("deprecation")
 	public WebDriver getDriver() {
 
-		driver = DriverSetUp.setDriver();
+		driver = DriverSetUpWin.setDriver();
 		driver.manage().window().maximize();
 		driver.get(baseUrl);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
