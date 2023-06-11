@@ -15,12 +15,12 @@ public class DriverSetupMac {
 
     public static WebDriver setDriver() {
         WebDriverManager.chromedriver().setup();
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", Arrays.asList("disbale-popup-blocking"));
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
         return driver;
     }
 
