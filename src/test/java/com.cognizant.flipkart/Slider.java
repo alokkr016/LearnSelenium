@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 
 public class Slider {
     public static void main(String[] args) {
-        WebDriver driver = DriverSetupMac.setDriver();
+        WebDriver driver = DriverSetup.getDriver();
         driver.get("https://webapps.tekstac.com/OnlineShopping/fashion.html");
 
         //First Way

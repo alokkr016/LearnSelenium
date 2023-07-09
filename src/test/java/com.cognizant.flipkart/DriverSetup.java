@@ -4,16 +4,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 
 
 import java.util.Arrays;
 
-public class DriverSetupMac {
+public class DriverSetup {
     private static WebDriver driver;
 
-    public static WebDriver setDriver() {
+    public static WebDriver getDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", Arrays.asList("disbale-popup-blocking"));
